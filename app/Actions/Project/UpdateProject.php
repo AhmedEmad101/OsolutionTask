@@ -8,10 +8,12 @@ class UpdateProject
 {
     public static function execute(Project $project,array $data)
     {
+       
         if($project->creator_id != auth()->user()->id)
         {
-            return;
+            throw new \Exception('You are not allowed to update this project.');
         }
-       return $project->update($data);
+        $project->update($data);
+       return $project;
     }
 }

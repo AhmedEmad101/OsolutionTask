@@ -33,10 +33,10 @@ class ProjectController extends Controller
   {try{
     $project_data = $request->validated();
     $updated_project = UpdateProject::execute($project,$project_data); 
-     return $this->successResponse(new ProjectResource($project),'project has been updated successfully',200);
+     return $this->successResponse(new ProjectResource($updated_project),'project has been updated successfully',200);
   }
    catch (\Exception $e) {
-            return $this->errorResponse('Couldn\'t update the project', 500);
+            return $this->errorResponse($e->getMessage(), 500);
         }
 
 }
