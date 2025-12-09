@@ -2,28 +2,31 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
 class Task extends Model
 {
     use HasFactory;
-    protected $fillable = [
-    'title',
-    'description',
-    'category_id',
-    'project_id',
-    'completed',
-    'priority',
-    'due_date',
-    'image_url'
-];
-public function project()
-{
-    return $this->belongsTo(Project::class);
-}
-public function category()
-{
-    return $this->belongsTo(Category::class);
-}
 
+    protected $fillable = [
+        'title',
+        'description',
+        'category_id',
+        'project_id',
+        'completed',
+        'priority',
+        'due_date',
+        'image_url',
+    ];
+
+    public function project()
+    {
+        return $this->belongsTo(Project::class);
+    }
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
 }

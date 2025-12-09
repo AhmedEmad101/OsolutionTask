@@ -26,7 +26,7 @@ class AuthController extends Controller
             return $this->successResponse([
                 'token' => $token,
                 'user' => auth()->user(),
-            ], 'Login successful!',200);
+            ], 'Login successful!', 200);
         } catch (\Exception $e) {
             return $this->errorResponse($e->getMessage(), 500);
         }

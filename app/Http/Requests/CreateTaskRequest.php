@@ -22,17 +22,18 @@ class CreateTaskRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'title'=>'required|max:255',
-            'description'=>'string|nullable',
-            'category_id'=>'required|integer|exists:categories,id',
-            'project_id'=>'required|integer',
-            'completed'=>'boolean',
-            'priority'=>'string|in:high,medium,low',
-            'due_date'=>'required|date|after:today|date_format:Y-m-d'
+            'title' => 'required|max:255',
+            'description' => 'string|nullable',
+            'category_id' => 'required|integer|exists:categories,id',
+            'project_id' => 'required|integer',
+            'completed' => 'boolean',
+            'priority' => 'string|in:high,medium,low',
+            'due_date' => 'required|date|after:today|date_format:Y-m-d',
 
         ];
     }
-     public function messages(): array
+
+    public function messages(): array
     {
         return [
             'title.required' => 'The Task title is required.',
@@ -42,8 +43,8 @@ class CreateTaskRequest extends FormRequest
             'priority.required' => 'The Task priority is required.',
             'status.string' => 'The status must be a string.',
             'priority.string' => 'The priority must be a string.',
-            'ends_at'.'date'=>'Task ending should be a date',
-            'ends_at'.'after'=>'Task ending should be greater than the creation date'
+            'ends_at'.'date' => 'Task ending should be a date',
+            'ends_at'.'after' => 'Task ending should be greater than the creation date',
         ];
     }
 }

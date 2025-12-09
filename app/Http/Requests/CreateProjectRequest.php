@@ -22,8 +22,8 @@ class CreateProjectRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'title'=>'string|required|unique:projects',
-            'description'=>'string'
+            'title' => 'string|required|unique:projects',
+            'description' => 'string',
         ];
     }
 }

@@ -22,8 +22,8 @@ class UpdateProjectRequest extends FormRequest
     public function rules(): array
     {
         return [
-           'title'=>'sometimes|unique:projects',
-           'description'=>'sometimes|string'
+            'title' => 'sometimes|unique:projects',
+            'description' => 'sometimes|string',
         ];
     }
 }

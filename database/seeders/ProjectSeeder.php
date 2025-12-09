@@ -2,9 +2,9 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
-use Illuminate\Database\Seeder;
 use App\Models\Project;
+use Illuminate\Database\Seeder;
+
 class ProjectSeeder extends Seeder
 {
     /**
@@ -12,12 +12,12 @@ class ProjectSeeder extends Seeder
      */
     public function run(): void
     {
-       Project::create([
+        Project::create([
             'title' => 'E-commerce Redesign',
             'creator_id' => 1,
             'description' => 'Full redesign and development of the online store frontend and checkout flow.',
         ]);
-        
+
         Project::create([
             'title' => 'Internal Reporting Tool',
             'creator_id' => 1,

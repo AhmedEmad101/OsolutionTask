@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('categories', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('color')->default('F08080')->nullable(); 
+            $table->string('color')->default('F08080')->nullable();
             $table->string('icon_url')->default('https://pixsector.com/icon/free-image-icon-png-vector/891')->nullable();
             $table->string('image_filter')->default('brightness(150%)')->nullable();
             $table->string('image_seed_offset')->default('1234')->nullable();

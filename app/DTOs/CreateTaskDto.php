@@ -1,7 +1,9 @@
 <?php
 
 namespace App\DTOs;
+
 use Carbon\Carbon;
+
 final class CreateTaskDto
 {
     public function __construct(
@@ -18,12 +20,11 @@ final class CreateTaskDto
     {
         return new self(
             $request['title'],
-            $request['description']??'',
+            $request['description'] ?? '',
             $request['category_id'],
             $request['project_id'],
-              $request['priority'],
-              Carbon::parse($request['due_date']),
-
+            $request['priority'],
+            Carbon::parse($request['due_date']),
 
         );
     }

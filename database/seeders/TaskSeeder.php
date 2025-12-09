@@ -2,15 +2,15 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
-use Illuminate\Database\Seeder;
 use App\Models\Task;
 use Carbon\Carbon;
+use Illuminate\Database\Seeder;
+
 class TaskSeeder extends Seeder
 {
     public function run(): void
     {
-       Task::create([
+        Task::create([
             'title' => 'Implement User Authentication',
             'description' => 'Setup Laravel Sanctum and configure login/registration endpoints.',
             'project_id' => 1,

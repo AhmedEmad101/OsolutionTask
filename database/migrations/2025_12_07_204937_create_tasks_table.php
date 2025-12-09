@@ -18,7 +18,7 @@ return new class extends Migration
             $table->foreignId('project_id')->constrained('projects')->onDelete('cascade');
             $table->foreignId('category_id')->constrained('categories')->onDelete('cascade');
             $table->boolean('completed')->default(false);
-            $table->enum('priority', ['high', 'medium','low'])->default('high');
+            $table->enum('priority', ['high', 'medium', 'low'])->default('high');
             $table->dateTime('due_date');
             $table->string('image_url')->default('https://avatar.iran.liara.run/public/35');
             $table->timestamps();
