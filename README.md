@@ -37,3 +37,5 @@ and you can try test@example.com with password 123456
 Create a test database and connect with it on .env.testing file and run 
 php artisan key:generate --env=testing
 php artisan test --env=testing
+---------------------------------
+you can use Osolutions.postman_collection.json to test the data on postman 
